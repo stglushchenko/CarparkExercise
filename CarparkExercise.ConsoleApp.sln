@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.ConsoleApp", "CarparkExercise.ConsoleApp\CarparkExercise.ConsoleApp.csproj", "{2541BA43-DCAB-4FE8-B584-515B7D613ED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarparkExercise.ConsoleApp", "CarparkExercise.ConsoleApp\CarparkExercise.ConsoleApp.csproj", "{2541BA43-DCAB-4FE8-B584-515B7D613ED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.Models", "..\CarparkExercise.Models\CarparkExercise.Models.csproj", "{7F9D5E12-5E3F-4320-9C23-4018741A4FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarparkExercise.Models", "..\CarparkExercise.Models\CarparkExercise.Models.csproj", "{7F9D5E12-5E3F-4320-9C23-4018741A4FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.RateCalculator", "CarparkExercise.RateCalculator\CarparkExercise.RateCalculator.csproj", "{1C11FBF8-BF41-47B6-9FE2-32CB4EF8D3E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarparkExercise.RateCalculator", "CarparkExercise.RateCalculator\CarparkExercise.RateCalculator.csproj", "{1C11FBF8-BF41-47B6-9FE2-32CB4EF8D3E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.Infrastructure", "CarparkExercise.Infrastructure\CarparkExercise.Infrastructure.csproj", "{D9DF79BF-C80F-4D20-A927-FA3F29C612BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarparkExercise.Infrastructure", "CarparkExercise.Infrastructure\CarparkExercise.Infrastructure.csproj", "{D9DF79BF-C80F-4D20-A927-FA3F29C612BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.RateCalculatorTest", "CarparkExercise.RateCalculatorTest\CarparkExercise.RateCalculatorTest.csproj", "{F27579C0-2CD3-454B-8928-261B0F059B6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarparkExercise.RateCalculatorTest", "CarparkExercise.RateCalculatorTest\CarparkExercise.RateCalculatorTest.csproj", "{F27579C0-2CD3-454B-8928-261B0F059B6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.IO", "CarparkExercise.IO\CarparkExercise.IO.csproj", "{DC8E2C89-93EB-4F66-974E-F5CD2D3FE9E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.IOTest", "CarparkExercise.IOTest\CarparkExercise.IOTest.csproj", "{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{F27579C0-2CD3-454B-8928-261B0F059B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F27579C0-2CD3-454B-8928-261B0F059B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F27579C0-2CD3-454B-8928-261B0F059B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8E2C89-93EB-4F66-974E-F5CD2D3FE9E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8E2C89-93EB-4F66-974E-F5CD2D3FE9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8E2C89-93EB-4F66-974E-F5CD2D3FE9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8E2C89-93EB-4F66-974E-F5CD2D3FE9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

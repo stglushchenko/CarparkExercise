@@ -10,16 +10,6 @@ namespace CarparkExercise.RateCalculator.Calculations
 
         public decimal Calculate(DateTime entryTime, DateTime exitTime)
         {
-            if (entryTime == null)
-            {
-                throw new ArgumentNullException(nameof(entryTime));
-            }
-
-            if (exitTime == null)
-            {
-                throw new ArgumentNullException(nameof(exitTime));
-            }
-
             if (entryTime >= exitTime)
             {
                 throw new ArgumentException("Entry date should be less than exit date");

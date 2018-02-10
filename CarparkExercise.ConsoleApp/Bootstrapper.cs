@@ -17,7 +17,7 @@ namespace CarparkExercise.ConsoleApp
     {
         private IUnityContainer _container;
 
-        private string _defaultLogFileName = "Logs/ParcelsExercise-.log";
+        private string _defaultLogFileName = "Logs/CarparkExercise-.log";
         private string _defaultLogCategoryName = "MainLog";
 
         public void ConfigureContainer()

@@ -24,12 +24,16 @@ namespace CarparkExercise.RateCalculatorTest
             var testSets = new(DateTime entry, DateTime exit, PayRateName expected)[]
             {
                 (new DateTime(2018, 01, 01, 06, 00, 00), new DateTime(2018, 01, 01, 23, 30, 00), EarlyBird),
+                (new DateTime(2018, 01, 01, 09, 00, 00), new DateTime(2018, 01, 01, 15, 30, 00), EarlyBird),
+                (new DateTime(2018, 01, 01, 06, 00, 00), new DateTime(2018, 01, 01, 15, 29, 59), StandardRate),
+                (new DateTime(2018, 01, 01, 09, 00, 01), new DateTime(2018, 01, 01, 15, 30, 00), StandardRate),
                 (new DateTime(2018, 01, 01, 06, 00, 00), new DateTime(2018, 01, 01, 23, 30, 01), StandardRate),
                 (new DateTime(2018, 01, 01, 05, 59, 59), new DateTime(2018, 01, 01, 23, 30, 00), StandardRate),
                 (new DateTime(2018, 01, 01, 06, 00, 00), new DateTime(2018, 01, 02, 23, 30, 00), StandardRate),
 
                 (new DateTime(2018, 01, 06, 06, 00, 00), new DateTime(2018, 01, 06, 23, 30, 00), WeekendRate),
                 (new DateTime(2018, 01, 06, 00, 00, 00), new DateTime(2018, 01, 07, 23, 59, 59), WeekendRate),
+                (new DateTime(2018, 01, 06, 00, 00, 00), new DateTime(2018, 01, 14, 23, 59, 59), StandardRate),
                 (new DateTime(2018, 01, 05, 23, 59, 59), new DateTime(2018, 01, 06, 23, 59, 59), StandardRate),
                 (new DateTime(2018, 01, 07, 00, 00, 00), new DateTime(2018, 01, 08, 00, 00, 00), StandardRate),
 
@@ -39,9 +43,9 @@ namespace CarparkExercise.RateCalculatorTest
             };
 
             // act and assert
-            foreach(var testSet in testSets)
+            foreach(var (entry, exit, expected) in testSets)
             {
-                Assert.AreEqual(testSet.expected, _targetClass.Define(testSet.entry, testSet.exit));
+                Assert.AreEqual(expected, _targetClass.Define(entry, exit));
             }
         }
 

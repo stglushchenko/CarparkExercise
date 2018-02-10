@@ -20,7 +20,22 @@ namespace CarparkExercise.IntergrationTests
 
         [DataTestMethod]
         [DataRow("2018-01-02 13:30", "2095-03-01 00:00", "Standard Rate", 563660)]
-        public void Run_NormalInput_NormalOutput(string entry, string exit, string expectedPayRateName, int expectedTotalCost)
+        [DataRow("2018-01-01 06:00", "2018-01-01 23:30", "Early Bird", 13)]
+        [DataRow("2018-01-01 09:00", "2018-01-01 15:30", "Early Bird", 13)]
+        [DataRow("2018-01-01 09:01", "2018-01-01 15:30", "Standard Rate", 20)]
+        [DataRow("2018-01-01 09:00", "2018-01-01 15:29", "Standard Rate", 20)]
+        [DataRow("2018-01-01 05:59", "2018-01-01 23:30", "Standard Rate", 20)]
+        [DataRow("2018-01-01 06:00", "2018-01-01 23:31", "Standard Rate", 20)]
+        [DataRow("2018-01-01 06:00", "2018-01-02 23:30", "Standard Rate", 40)]
+        [DataRow("2018-01-06 06:00", "2018-01-06 23:30", "Weekend Rate", 10)]
+        [DataRow("2018-01-06 00:00", "2018-01-07 23:59", "Weekend Rate", 10)]
+        [DataRow("2018-01-06 06:00", "2018-01-14 23:59", "Standard Rate", 180)]
+        [DataRow("2018-01-05 23:59", "2018-01-07 23:59", "Standard Rate", 60)]
+        [DataRow("2018-01-07 00:00", "2018-01-08 00:00", "Standard Rate", 40)]
+        [DataRow("2018-01-05 23:59", "2018-01-06 06:00", "Night Rate", 6.50)]
+        [DataRow("2018-01-05 18:00", "2018-01-06 06:00", "Night Rate", 6.50)]
+        [DataRow("2018-01-05 18:00", "2018-01-05 18:01", "Night Rate", 6.50)]
+        public void Run_NormalInput_NormalOutput(string entry, string exit, string expectedPayRateName, double expectedTotalCost)
         {
             // arrange
             var stringBuilder = new StringBuilder();

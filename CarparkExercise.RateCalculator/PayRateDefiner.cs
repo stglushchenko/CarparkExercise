@@ -21,7 +21,7 @@ namespace CarparkExercise.RateCalculator
 
             if ((entry.DayOfWeek == Saturday || entry.DayOfWeek == Sunday)
                 && (exit.DayOfWeek == Saturday || exit.DayOfWeek == Sunday)
-                && Period.Between(entry, exit).Hours <= 48)
+                && Period.Between(entry, exit).Days <= 2)
             {
                 return WeekendRate;
             }

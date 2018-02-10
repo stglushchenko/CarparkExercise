@@ -28,7 +28,7 @@ namespace CarparkExercise.RateCalculatorTest
             standard.SetReturnsDefault(2m);
             standard.SetReturnsDefault("Standard Rate");
 
-            ICalculation[] calculationTypes = new ICalculation[]
+            var calculationTypes = new ICalculation[]
             {
                 earlyBird.Object,
                 standard.Object

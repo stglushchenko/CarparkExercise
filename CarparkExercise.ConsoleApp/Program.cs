@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 
 namespace CarparkExercise.ConsoleApp
 {
@@ -6,7 +8,21 @@ namespace CarparkExercise.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var auCultureInfo = new CultureInfo("en-AU");
+            CultureInfo.DefaultThreadCurrentCulture = auCultureInfo;
+            Thread.CurrentThread.CurrentCulture = auCultureInfo;
+
+            var bootstrapper = new Bootstrapper();
+            bootstrapper.ConfigureContainer();
+            try
+            {
+                bootstrapper.Run();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadKey();
         }
     }
 }

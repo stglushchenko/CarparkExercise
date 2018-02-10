@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.IO", "Carpa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.IOTest", "CarparkExercise.IOTest\CarparkExercise.IOTest.csproj", "{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarparkExercise.IntergrationTests", "CarparkExercise.IntergrationTests\CarparkExercise.IntergrationTests.csproj", "{03737649-AC12-47BF-A43E-64995D55AC59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0F1F16B-FF29-4A1F-AB65-0B425A4539A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03737649-AC12-47BF-A43E-64995D55AC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03737649-AC12-47BF-A43E-64995D55AC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03737649-AC12-47BF-A43E-64995D55AC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03737649-AC12-47BF-A43E-64995D55AC59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

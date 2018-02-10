@@ -1,6 +1,7 @@
 ﻿using CarparkExercise.Infrastructure.Exceptions;
 using CarparkExercise.Infrastructure.Interfaces.RateCalculator;
 using CarparkExercise.Models.Enums;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 
@@ -9,10 +10,12 @@ namespace CarparkExercise.RateCalculator
     public class CalculationStrategy : ICalculationStrategy
     {
         private ICalculation[] _calculationTypes;
+        private readonly ILogger _logger;
 
-        public CalculationStrategy(ICalculation[] calculationTypes)
+        public CalculationStrategy(ICalculation[] calculationTypes, ILogger logger)
         {
             _calculationTypes = calculationTypes;
+            _logger = logger;
         }
 
         private ICalculation GetCalculationType(PayRateName payRateName)
@@ -21,7 +24,9 @@ namespace CarparkExercise.RateCalculator
 
             if (result == null)
             {
-                throw new NotImplementedStrategyException($"The calculation strategy for {Enum.GetName(typeof(PayRateName),payRateName)} is not implemented");
+                var errorMessage = $"The calculation strategy for {Enum.GetName(typeof(PayRateName), payRateName)} is not implemented";
+                _logger.LogError(errorMessage);
+                throw new NotImplementedStrategyException(errorMessage);
             }
 
             return result;

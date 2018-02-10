@@ -12,4 +12,10 @@
     <PackageReference Include="Unity" Version="5.5.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CarparkExercise.Infrastructure\CarparkExercise.Infrastructure.csproj" />
+    <ProjectReference Include="..\CarparkExercise.IO\CarparkExercise.IO.csproj" />
+    <ProjectReference Include="..\CarparkExercise.RateCalculator\CarparkExercise.RateCalculator.csproj" />
+  </ItemGroup>
+
 </Project>

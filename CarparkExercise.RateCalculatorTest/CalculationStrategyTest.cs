@@ -2,6 +2,7 @@ using CarparkExercise.Infrastructure.Exceptions;
 using CarparkExercise.Infrastructure.Interfaces.RateCalculator;
 using CarparkExercise.Models.Enums;
 using CarparkExercise.RateCalculator;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -33,7 +34,7 @@ namespace CarparkExercise.RateCalculatorTest
                 standard.Object
             };
 
-            _targetClass = new CalculationStrategy(calculationTypes);
+            _targetClass = new CalculationStrategy(calculationTypes, Mock.Of<ILogger>());
         }
 
         [DataTestMethod]
